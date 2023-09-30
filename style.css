@@ -1,0 +1,211 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #181719;
+    font-family: 'Montserrat';
+}   #menu {
+    display: none; /* Hide the menu by default */
+    /* Additional styling for the menu */
+    /* ... */
+}
+
+#menu.active {
+    display: block; /* Show the menu when it has the "active" class */
+    /* Additional styling for the menu when active */
+    /* ... */
+}
+  }
+.mybox{
+    margin: 1rem 0.7rem;
+    background-color: #181719;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.navbar{
+    background-color: #181719;
+    display: flex;
+    justify-content: space-between;
+}
+.items{
+    display:none ;
+}
+.logo-style{
+    font-size: 14px;
+    font-weight: 500;
+    word-wrap: break-word;
+    background-color: #181719;
+    color: white;
+    font-family: 'Montserrat';
+    border: 1px solid white;
+    padding: 6px;
+    cursor: pointer;
+}
+.logo-style:hover{
+    background-color: white;
+    color: #181719;
+}
+.ham-logo{
+    padding: 6px;
+    cursor: pointer;
+}
+.ham-logo::after{
+    background-color: red;
+}
+.main-container{
+    margin-top: 40px;
+}
+.text-container{
+    color:white;
+    font-family:'Montserrat';
+    font-weight: 500;
+    word-wrap: break-word;
+    margin-bottom: 40px;
+}
+.text-container h2{
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+.text-container p{
+    font-size: 14px;
+    font-weight: 400;
+    word-wrap: break-word;
+    margin-bottom: 20px;
+}
+.text-container a,.text-container a:visited{
+    color:white;
+    text-decoration: none;
+    cursor: pointer;
+}
+.text-container a:hover{
+    filter: brightness(70%);
+}
+.design{
+    position: relative;
+}
+
+.designer{
+    background-color: #181719;
+    color: white;
+    min-width: 300px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    right: 20px;
+    bottom: -60px;
+}
+.designer-box{
+    display: flex;
+    gap: 1rem;
+    padding: 10px 20px;
+}
+.designer-box img{
+    border-radius: 50%;
+    width: 60px;
+}
+.designer-info{
+    text-align: center;
+    margin-top: 9px;
+    margin-left: -10px;
+} 
+.designer-info p{
+    font-size: 14px;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    word-wrap: break-word;
+}
+.designer-info span{
+    color: #828282;
+    font-size: 10px;
+    font-family: Montserrat;
+    font-weight: 500;
+    word-wrap: break-word
+}
+.designer-date{
+    padding-bottom: 30px;
+    max-width: 210px;
+    margin-left: 20px;
+    font-size: 18px;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    word-wrap: break-word
+}
+footer{
+    color: #a9a9a9;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    word-wrap: break-word;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 80px;
+}
+
+@media (min-width:600px){
+    .mybox{
+        margin: 1.5rem 4rem;
+    }
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+    }
+    .items{
+        display: flex;
+        /* gap: 40px; */
+        list-style-type: none;
+        height: 100%;
+        padding-top: 6px;
+    }
+    .nav-link{
+        text-decoration: none;
+        /* padding: 10px; */
+        font-weight: 500;
+        margin-left: 80px;
+        color: white;
+        position: relative;
+        /* background-color: blue;
+        border: 1px solid red; */
+    }
+    
+    .nav-link::after{
+        content: '';
+        height: 2.5px;
+        width: 100%;
+        background-color: white;
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        margin-top: 20px;
+        opacity: 0; 
+        transition: all 0.5s;
+        pointer-events: none;
+    }
+    .nav-link:hover::after, .nav-link:focus:after{
+        opacity: 1;
+
+    }
+    .ham-logo{
+        display: none;
+    }
+
+    .main-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 7rem;
+    }
+    
+    .main-container img{
+        display: block;
+    }
+    .text-container{
+        place-self: center;
+    }
+    
+    .design{
+        background-color: yellow;
+    }
+    .designer{
+        width: 380px;
+    }
+}
